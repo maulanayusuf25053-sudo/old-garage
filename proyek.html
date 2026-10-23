@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<!-- Halaman Proyek Restorasi - Old Garage -->
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <!-- Agar tampil rapi di HP dan komputer -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proyek Restorasi - Old Garage</title>
+  <meta name="description" content="Hasil proyek restorasi Old Garage: Honda CB 100/125 dan dokumentasi proses pengerjaan.">
+  <!-- Pakai CSS yang sama dengan Beranda dan Layanan -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ===== NAVBAR (sama dengan Beranda/Layanan) ===== -->
+  <header class="navbar">
+    <div class="wadah nav-isi">
+      <a href="index.html" class="logo">Old Garage</a>
+
+      <!-- Tombol menu untuk HP -->
+      <button class="tombol-menu" id="tombolMenu" aria-label="Buka menu">&#9776;</button>
+
+      <nav class="menu" id="menuUtama">
+        <a href="index.html">Beranda</a>
+        <a href="layanan.html">Layanan</a>
+        <a href="proyek.html" class="aktif">Proyek</a>
+        <a href="tentang.html">Tentang Kami</a>
+        <a href="konsultasi.html">Konsultasi</a>
+        <a href="kontak.html">Kontak</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== JUDUL HALAMAN ===== -->
+  <section class="hero">
+    <div class="wadah">
+      <p class="label">Old Garage</p>
+      <h1>Proyek Restorasi</h1>
+      <p>Setiap proyek didokumentasikan dari kondisi awal sampai hasil akhir.</p>
+    </div>
+  </section>
+
+  <!-- ===== PROYEK UTAMA: HONDA CB 100/125 ===== -->
+  <section class="bagian">
+    <div class="wadah">
+      <article class="kartu proyek-utama">
+        <h2>Honda CB 100/125 — Restorasi Penuh</h2>
+        <p><strong>Jenis pekerjaan:</strong> Restorasi penuh — mesin, rangka, body, kelistrikan, hingga cat akhir.</p>
+
+        <!-- Foto sebelum dan sesudah -->
+        <div class="before-after">
+          <figure>
+            <img src="gambar/before.jpg" alt="Honda CB sebelum restorasi">
+            <figcaption><strong>Sebelum:</strong> kondisi bahan, mesin belum terpasang.</figcaption>
+          </figure>
+          <figure>
+            <img src="gambar/after.jpg" alt="Honda CB sesudah restorasi">
+            <figcaption><strong>Sesudah:</strong> motor siap jalan dengan tampilan orisinal.</figcaption>
+          </figure>
+        </div>
+
+        <p class="deskripsi-proyek">
+          Motor datang dalam kondisi bahan dan tidak lengkap.
+          Rangka diperbaiki dan dicat ulang, mesin dibongkar dan dirakit kembali,
+          lalu body dipulihkan sampai motor kembali hidup dan nyaman dipakai harian.
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ===== DOKUMENTASI PROSES / PROYEK PENDUKUNG ===== -->
+  <section class="bagian bagian-gelap">
+    <div class="wadah">
+      <h2>Tahapan Pengerjaan</h2>
+      <p class="subjudul">Foto asli dari bengkel, sesuai urutan kerja.</p>
+
+      <div class="layanan-grid">
+        <!-- Tahap 1 -->
+        <article class="kartu">
+          <img src="gambar/rangka.jpg" alt="Tahap perbaikan rangka">
+          <h3>Tahap 1 — Perbaikan Rangka</h3>
+          <p><strong>Jenis pekerjaan:</strong> Perbaikan rangka dan pengecatan dasar.</p>
+          <p>Rangka yang berkarat dibersihkan, dilas bila perlu, lalu dicat ulang agar kuat dan rapi.</p>
+        </article>
+
+        <!-- Tahap 2 -->
+        <article class="kartu">
+          <img src="gambar/mesin.jpg" alt="Tahap perbaikan mesin">
+          <h3>Tahap 2 — Perbaikan Mesin</h3>
+          <p><strong>Jenis pekerjaan:</strong> Bongkar, periksa, dan rakit ulang mesin.</p>
+          <p>Bagian dalam mesin diperiksa satu per satu agar motor dapat menyala dan berjalan normal.</p>
+        </article>
+
+        <!-- Tahap 3 -->
+        <article class="kartu">
+          <img src="gambar/proses-1.jpg" alt="Tahap perakitan body">
+          <h3>Tahap 3 — Body dan Perakitan</h3>
+          <p><strong>Jenis pekerjaan:</strong> Pemasangan tangki, jok, dan body.</p>
+          <p>Body dipasang kembali ke rangka dan disetel agar dudukannya pas dan kokoh.</p>
+        </article>
+
+        <!-- Tahap 4 -->
+        <article class="kartu">
+          <img src="gambar/proses-2.jpg" alt="Tahap penyelesaian akhir">
+          <h3>Tahap 4 — Penyelesaian</h3>
+          <p><strong>Jenis pekerjaan:</strong> Perakitan akhir dan pengecekan jalan.</p>
+          <p>Motor dirakit lengkap lalu dicek kelistrikan, rem, dan mesin sebelum diserahkan ke pemilik.</p>
+        </article>
+      </div>
+
+      <!-- Foto tambahan bila ingin dilihat -->
+      <h3 class="judul-kecil">Foto Tambahan Proses</h3>
+      <div class="galeri-proses">
+        <img src="gambar/proses-3.jpg" alt="Foto proses tambahan 1">
+        <img src="gambar/proses-4.jpg" alt="Foto proses tambahan 2">
+        <img src="gambar/proses-1.jpg" alt="Foto proses tambahan 3">
+        <img src="gambar/rangka.jpg" alt="Foto proses tambahan 4">
+      </div>
+
+      <!-- Ajakan konsultasi -->
+      <div class="tengah tombol-bawah">
+        <p class="teks-cta-gelap">Punya motor tua dengan kondisi mirip? Ceritakan kepada kami.</p>
+        <a href="konsultasi.html" class="tombol tombol-utama">Konsultasi Sekarang</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER (sama dengan Beranda/Layanan) ===== -->
+  <footer class="footer">
+    <div class="wadah footer-isi">
+      <div>
+        <h4>Old Garage</h4>
+        <p>Setiap Motor Tua Punya Cerita.</p>
+      </div>
+      <div>
+        <h4>Menu</h4>
+        <p>
+          <a href="index.html">Beranda</a> ·
+          <a href="layanan.html">Layanan</a> ·
+          <a href="proyek.html">Proyek</a> ·
+          <a href="tentang.html">Tentang Kami</a>
+        </p>
+      </div>
+      <div>
+        <h4>Kontak</h4>
+        <p>Alamat bengkel ditulis di sini<br>Senin – Sabtu, 09.00 – 17.00</p>
+      </div>
+    </div>
+    <p class="hak-cipta">&copy; <span id="tahun">2026</span> Old Garage. Tugas Web 1.</p>
+  </footer>
+
+  <!-- Tombol WhatsApp mengambang -->
+  <a href="https://wa.me/6200000000000" class="tombol-wa" aria-label="Chat WhatsApp">WA</a>
+
+  <!-- ===== CHATBOT OLD GARAGE ===== -->
+  <!-- Tombol chat mengambang di pojok kanan bawah (di atas tombol WhatsApp) -->
+  <button class="tombol-chat" id="tombolChat" aria-label="Buka chat dengan Old Garage">&#128172;</button>
+
+  <!-- Kotak percakapan chatbot -->
+  <div class="kotak-chat" id="kotakChat">
+    <div class="area-chat" id="areaChat"></div>
+    <div class="pilihan-chat" id="pilihanChat">
+      <button type="button" class="tombol pilihan-chat" data-teks="Layanan apa saja yang tersedia?">Layanan apa saja yang tersedia?</button>
+      <button type="button" class="tombol pilihan-chat" data-teks="Apakah bisa restorasi motor tua?">Apakah bisa restorasi motor tua?</button>
+      <button type="button" class="tombol pilihan-chat" data-teks="Apakah bisa memperbaiki mesin?">Apakah bisa memperbaiki mesin?</button>
+      <button type="button" class="tombol pilihan-chat" data-teks="Apakah bisa modifikasi motor?">Apakah bisa modifikasi motor?</button>
+      <button type="button" class="tombol pilihan-chat" data-teks="Bagaimana cara konsultasi?">Bagaimana cara konsultasi?</button>
+      <button type="button" class="tombol pilihan-chat" data-teks="Bagaimana cara menghubungi bengkel?">Bagaimana cara menghubungi bengkel?</button>
+    </div>
+    <!-- Form kirim pertanyaan ke chatbot -->
+    <form class="form-chat" id="formChat">
+      <input type="text" id="teksChat" placeholder="Ketik pertanyaan Anda..." autocomplete="off">
+      <button type="submit" class="tombol tombol-utama">Kirim</button>
+    </form>
+  </div>
+
+  <!-- Pakai JS yang sama -->
+  <script src="js/script.js"></script>
+</body>
+</html>

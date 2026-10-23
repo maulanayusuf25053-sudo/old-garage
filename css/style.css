@@ -1,0 +1,609 @@
+/* =========================================
+   Old Garage - File CSS Utama
+   Gaya: klasik / vintage / garage
+   Warna: hitam, coklat, krem, tembaga
+   Dibuat sederhana untuk tugas Web 1
+   ========================================= */
+
+/* Warna utama website (agar mudah diganti) */
+:root {
+  --hitam: #1a1512;    /* navbar & footer */
+  --coklat: #4a3428;   /* judul & tombol */
+  --krem: #f5efe6;     /* latar utama */
+  --krem-gelap: #e9ddc9;
+  --tembaga: #c19a5b;  /* aksen / garis */
+  --putih: #ffffff;
+}
+
+/* Pengaturan dasar */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--krem);
+  color: var(--hitam);
+  line-height: 1.6;
+}
+
+/* Judul memakai font serif agar kesan vintage */
+h1, h2, h3, h4 {
+  font-family: Georgia, "Times New Roman", serif;
+  color: var(--coklat);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Wadah isi agar tidak terlalu lebar */
+.wadah {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+  background-color: var(--hitam);
+  position: sticky; /* menempel di atas saat scroll */
+  top: 0;
+}
+
+.nav-isi {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.logo {
+  color: var(--krem);
+  font-family: Georgia, serif;
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.menu a {
+  color: var(--krem);
+  text-decoration: none;
+  margin-left: 16px;
+}
+
+.menu a:hover,
+.menu a.aktif {
+  color: var(--tembaga);
+}
+
+/* Tombol garis tiga, hanya muncul di HP */
+.tombol-menu {
+  display: none;
+  background: none;
+  border: 1px solid var(--tembaga);
+  color: var(--krem);
+  font-size: 20px;
+  border-radius: 6px;
+  padding: 4px 10px;
+  cursor: pointer;
+}
+
+/* ===== HERO ===== */
+.hero {
+  background-color: var(--krem-gelap);
+  border-bottom: 3px solid var(--tembaga);
+  padding: 40px 0;
+}
+
+.hero-isi {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+.hero-teks,
+.hero-gambar {
+  flex: 1;
+}
+
+.label {
+  color: var(--tembaga);
+  font-weight: bold;
+  margin: 0;
+}
+
+.hero h1 {
+  font-size: 40px;
+  margin: 8px 0;
+}
+
+/* Wadah tombol di hero (Beranda & Tentang) */
+.hero-tombol {
+  margin-top: 16px;
+}
+
+.keterangan {
+  font-size: 14px;
+  color: var(--coklat);
+}
+
+/* ===== TOMBOL ===== */
+.tombol {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.tombol-utama {
+  background-color: var(--coklat);
+  color: var(--putih);
+}
+
+.tombol-utama:hover {
+  background-color: var(--hitam);
+}
+
+.tombol-kedua {
+  border: 2px solid var(--coklat);
+  color: var(--coklat);
+  margin-left: 8px;
+}
+
+/* ===== BAGIAN & KARTU ===== */
+.bagian {
+  padding: 40px 0;
+}
+
+.subjudul {
+  margin-top: -10px;
+  color: var(--coklat);
+}
+
+.bagian-gelap {
+  background-color: var(--hitam);
+}
+
+.bagian-gelap h2,
+.bagian-gelap .subjudul,
+.bagian-gelap figcaption {
+  color: var(--krem);
+}
+
+.bagian-gelap .judul-kecil {
+  color: var(--tembaga);
+}
+
+/* 3 kartu sejajar di komputer */
+.kartu-3 {
+  display: flex;
+  gap: 16px;
+}
+
+.kartu {
+  flex: 1;
+  background-color: var(--putih);
+  border: 1px solid var(--krem-gelap);
+  border-top: 4px solid var(--tembaga);
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.kartu a {
+  color: var(--coklat);
+  font-weight: bold;
+}
+
+.kutipan {
+  font-style: italic;
+}
+
+/* ===== BEFORE - AFTER ===== */
+.before-after {
+  display: flex;
+  gap: 16px;
+}
+
+.before-after figure {
+  flex: 1;
+  margin: 0;
+  background: var(--putih);
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.galeri-proses {
+  display: flex;
+  gap: 12px;
+  margin: 16px 0 24px;
+}
+
+.galeri-proses img {
+  width: 25%;
+  object-fit: cover;
+  height: 140px;
+}
+
+.tengah {
+  text-align: center;
+}
+
+/* ===== GRID KHUSUS HALAMAN LAYANAN (2x2) ===== */
+.layanan-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.layanan-grid .kartu {
+  flex: 1 1 45%;
+}
+
+.tombol-bawah {
+  margin-top: 24px;
+}
+
+/* ===== KHUSUS HALAMAN PROYEK ===== */
+.proyek-utama h2 {
+  margin-top: 0;
+}
+
+.deskripsi-proyek {
+  margin-bottom: 0;
+}
+
+.teks-cta-gelap {
+  color: var(--krem);
+}
+
+/* ===== KHUSUS HALAMAN TENTANG ===== */
+.tentang-isi {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+.tentang-teks,
+.tentang-gambar {
+  flex: 1;
+}
+
+.cerita h2 {
+  margin-top: 0;
+}
+
+/* ===== KHUSUS HALAMAN KONSULTASI (FORMULIR) ===== */
+.form {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.form-grup {
+  margin-bottom: 16px;
+  border: none;
+  padding: 0;
+}
+
+.form label,
+.form legend {
+  display: block;
+  font-weight: bold;
+  color: var(--coklat);
+  margin-bottom: 6px;
+}
+
+.form input[type="text"],
+.form input[type="tel"],
+.form input[type="number"],
+.form select,
+.form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--krem-gelap);
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 15px;
+}
+
+.form input[type="file"] {
+  margin-top: 4px;
+}
+
+.pilihan {
+  font-weight: normal;
+  margin-bottom: 4px;
+}
+
+.pesan {
+  margin-top: 12px;
+  font-weight: bold;
+  color: #1f7a3d;
+}
+
+/* ===== KHUSUS HALAMAN KONTAK ===== */
+.kontak-isi {
+  display: flex;
+  gap: 16px;
+}
+
+.kontak-isi .kartu {
+  flex: 1;
+}
+
+.peta {
+  background-color: var(--krem);
+  border: 1px dashed var(--tembaga);
+  border-radius: 6px;
+  padding: 16px;
+}
+
+.form-kontak label {
+  display: block;
+  font-weight: bold;
+  color: var(--coklat);
+  margin-bottom: 6px;
+}
+
+.form-kontak input[type="text"],
+.form-kontak textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--krem-gelap);
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 15px;
+}
+
+/* ===== CTA & FOOTER ===== */
+.cta {
+  background-color: var(--krem-gelap);
+  text-align: center;
+  padding: 40px 16px;
+  border-top: 3px solid var(--tembaga);
+}
+
+.footer {
+  background-color: var(--hitam);
+  color: var(--krem);
+  padding-top: 24px;
+}
+
+.footer h4 {
+  color: var(--tembaga);
+  margin-bottom: 6px;
+}
+
+.footer a {
+  color: var(--krem);
+  text-decoration: none;
+}
+
+.footer-isi {
+  display: flex;
+  gap: 24px;
+}
+
+.footer-isi > div {
+  flex: 1;
+}
+
+.hak-cipta {
+  text-align: center;
+  border-top: 1px solid var(--coklat);
+  padding: 12px;
+  margin: 16px 0 0;
+  font-size: 14px;
+}
+
+/* Tombol WA mengambang */
+.tombol-wa {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  background-color: #1f7a3d;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 12px 16px;
+  border-radius: 50px;
+}
+
+/* ===== RESPONSIF UNTUK HP ===== */
+@media (max-width: 768px) {
+  /* Menu HP: disembunyikan, muncul saat tombol diklik */
+  .tombol-menu {
+    display: block;
+  }
+
+  .menu {
+    display: none;
+    width: 100%;
+  }
+
+  .menu.tampil {
+    display: block;
+  }
+
+  .menu a {
+    display: block;
+    margin: 10px 0;
+  }
+
+  .nav-isi {
+    flex-wrap: wrap;
+  }
+
+  /* Semua kolom menjadi 1 kolom di HP */
+  .hero-isi,
+  .kartu-3,
+  .before-after,
+  .footer-isi,
+  .tentang-isi,
+  .kontak-isi {
+    flex-direction: column;
+  }
+
+  /* Kartu layanan menjadi 1 kolom di HP */
+  .layanan-grid .kartu {
+    flex: 1 1 100%;
+  }
+
+  .hero h1 {
+    font-size: 30px;
+  }
+
+  .galeri-proses {
+    flex-wrap: wrap;
+  }
+
+  .galeri-proses img {
+    width: 48%;
+  }
+}
+
+/* =========================================
+   Old Garage - Chatbot
+   Desain mengikuti tema vintage / klasik
+   ========================================= */
+
+/* Tombol chat mengambang di pojok kanan bawah (di atas tombol WhatsApp) */
+.tombol-chat {
+  position: fixed;
+  right: 16px;
+  bottom: 80px; /* di atas tombol WhatsApp */
+  width: 56px;
+  height: 56px;
+  border: none;
+  border-radius: 50%;
+  background-color: var(--coklat);
+  color: var(--putih);
+  font-size: 24px;
+  font-family: inherit;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.35);
+  z-index: 1100;
+}
+
+/* Kotak percakapan chatbot */
+.kotak-chat {
+  position: fixed;
+  right: 16px;
+  bottom: 148px; /* di atas tombol chat */
+  width: 330px;
+  max-width: calc(100vw - 32px);
+  height: 430px;
+  max-height: calc(100vh - 180px);
+  background-color: var(--putih);
+  border: 2px solid var(--tembaga);
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  display: none; /* disembunyikan, muncul lewat class "tampil" */
+  flex-direction: column;
+  overflow: hidden;
+  z-index: 1100;
+}
+
+.kotak-chat.tampil {
+  display: flex;
+}
+
+/* Area pesan chat */
+.area-chat {
+  flex: 1;
+  overflow-y: auto;
+  padding: 12px;
+  background-color: var(--krem);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Bubble pesan */
+.bubble-chat {
+  max-width: 80%;
+  padding: 8px 12px;
+  border-radius: 12px;
+  font-size: 14px;
+  line-height: 1.5;
+  text-align: left;
+}
+
+.bubble-chat.bot {
+  align-self: flex-start;
+  background-color: var(--putih);
+  border: 1px solid var(--krem-gelap);
+  border-bottom-left-radius: 4px;
+}
+
+.bubble-chat.user {
+  align-self: flex-end;
+  background-color: var(--coklat);
+  color: var(--putih);
+  border-bottom-right-radius: 4px;
+}
+
+.bubble-chat a {
+  color: var(--coklat);
+  font-weight: bold;
+}
+
+/* Tombol pilihan pertanyaan */
+.pilihan-chat {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 10px 12px;
+  background-color: var(--putih);
+  border-top: 1px solid var(--krem-gelap);
+}
+
+.pilihan-chat .tombol {
+  padding: 6px 10px;
+  font-size: 12px;
+  border-radius: 20px;
+  background-color: var(--krem);
+  color: var(--coklat);
+  border: 1px solid var(--tembaga);
+}
+
+/* Form kirim pertanyaan */
+.form-chat {
+  display: flex;
+  gap: 8px;
+  padding: 10px;
+  background-color: var(--putih);
+  border-top: 1px solid var(--krem-gelap);
+}
+
+.form-chat input {
+  flex: 1;
+  padding: 8px 12px;
+  border: 1px solid var(--krem-gelap);
+  border-radius: 20px;
+  font-size: 14px;
+  font-family: inherit;
+}
+
+/* Responsif HP untuk chatbot */
+@media (max-width: 768px) {
+  .tombol-chat {
+    right: 12px;
+    bottom: 76px;
+    width: 52px;
+    height: 52px;
+    font-size: 22px;
+  }
+
+  .kotak-chat {
+    right: 12px;
+    bottom: 138px;
+    width: calc(100vw - 24px);
+    height: 360px;
+  }
+}

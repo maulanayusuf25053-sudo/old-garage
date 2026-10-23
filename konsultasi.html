@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<!-- Halaman Konsultasi - Old Garage -->
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <!-- Agar tampil rapi di HP dan komputer -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Konsultasi - Old Garage</title>
+  <meta name="description" content="Formulir konsultasi Old Garage untuk restorasi, perbaikan, dan modifikasi motor tua atau klasik.">
+  <!-- Pakai CSS yang sama dengan halaman lain -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ===== NAVBAR (sama dengan halaman lain) ===== -->
+  <header class="navbar">
+    <div class="wadah nav-isi">
+      <a href="index.html" class="logo">Old Garage</a>
+
+      <!-- Tombol menu untuk HP -->
+      <button class="tombol-menu" id="tombolMenu" aria-label="Buka menu">&#9776;</button>
+
+      <nav class="menu" id="menuUtama">
+        <a href="index.html">Beranda</a>
+        <a href="layanan.html">Layanan</a>
+        <a href="proyek.html">Proyek</a>
+        <a href="tentang.html">Tentang Kami</a>
+        <a href="konsultasi.html" class="aktif">Konsultasi</a>
+        <a href="kontak.html">Kontak</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== JUDUL HALAMAN ===== -->
+  <section class="hero">
+    <div class="wadah">
+      <p class="label">Old Garage</p>
+      <h1>Konsultasi</h1>
+      <p>Ceritakan kondisi motor Anda. Kami bantu perkirakan pekerjaan dan biayanya.</p>
+    </div>
+  </section>
+
+  <!-- ===== FORMULIR KONSULTASI ===== -->
+  <section class="bagian">
+    <div class="wadah">
+      <form class="kartu form" id="formKonsultasi">
+        <!-- 1. Nama -->
+        <div class="form-grup">
+          <label for="nama">Nama</label>
+          <input type="text" id="nama" name="nama" placeholder="Nama lengkap Anda" required>
+        </div>
+
+        <!-- 2. Nomor WhatsApp -->
+        <div class="form-grup">
+          <label for="wa">Nomor WhatsApp</label>
+          <input type="tel" id="wa" name="wa" placeholder="Contoh: 081234567890" required>
+        </div>
+
+        <!-- 3. Jenis Motor -->
+        <div class="form-grup">
+          <label for="jenis">Jenis Motor</label>
+          <input type="text" id="jenis" name="jenis" placeholder="Contoh: Honda CB 100" required>
+        </div>
+
+        <!-- 4. Tahun Motor -->
+        <div class="form-grup">
+          <label for="tahunMotor">Tahun Motor</label>
+          <input type="number" id="tahunMotor" name="tahunMotor" min="1950" max="2026" placeholder="Contoh: 1978">
+        </div>
+
+        <!-- 5. Kondisi Motor -->
+        <div class="form-grup">
+          <label for="kondisi">Kondisi Motor</label>
+          <select id="kondisi" name="kondisi" required>
+            <option value="">-- Pilih kondisi motor --</option>
+            <option value="bahan">Kondisi bahan / tidak hidup</option>
+            <option value="hidup-rusak">Hidup tapi ada kerusakan</option>
+            <option value="jalan-modif">Jalan normal, ingin modifikasi</option>
+          </select>
+        </div>
+
+        <!-- 6. Pilihan layanan -->
+        <fieldset class="form-grup">
+          <legend>Pilihan Layanan</legend>
+          <label class="pilihan">
+            <input type="radio" name="layanan" value="Restorasi Penuh" required> Restorasi Penuh
+          </label>
+          <label class="pilihan">
+            <input type="radio" name="layanan" value="Perbaikan Mesin"> Perbaikan Mesin
+          </label>
+          <label class="pilihan">
+            <input type="radio" name="layanan" value="Perbaikan Body"> Perbaikan Body
+          </label>
+          <label class="pilihan">
+            <input type="radio" name="layanan" value="Modifikasi"> Modifikasi
+          </label>
+        </fieldset>
+
+        <!-- 7. Deskripsi kebutuhan -->
+        <div class="form-grup">
+          <label for="deskripsi">Deskripsi Kebutuhan</label>
+          <textarea id="deskripsi" name="deskripsi" rows="4" placeholder="Contoh: mesin tidak menyala, body berkarat, ingin cat ulang warna asli."></textarea>
+        </div>
+
+        <!-- 8. Unggah foto motor -->
+        <div class="form-grup">
+          <label for="foto">Foto Motor (opsional)</label>
+          <input type="file" id="foto" name="foto" accept="image/*">
+          <p class="keterangan" id="infoFoto">Belum ada foto dipilih.</p>
+        </div>
+
+        <!-- 9. Tombol kirim -->
+        <button type="submit" class="tombol tombol-utama">Kirim Konsultasi</button>
+
+        <!-- Pesan hasil (diisi JavaScript, tanpa backend) -->
+        <p class="pesan" id="pesanHasil"></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER (sama dengan halaman lain) ===== -->
+  <footer class="footer">
+    <div class="wadah footer-isi">
+      <div>
+        <h4>Old Garage</h4>
+        <p>Setiap Motor Tua Punya Cerita.</p>
+      </div>
+      <div>
+        <h4>Menu</h4>
+        <p>
+          <a href="index.html">Beranda</a> ·
+          <a href="layanan.html">Layanan</a> ·
+          <a href="proyek.html">Proyek</a> ·
+          <a href="tentang.html">Tentang Kami</a>
+        </p>
+      </div>
+      <div>
+        <h4>Kontak</h4>
+        <p>Alamat bengkel ditulis di sini<br>Senin – Sabtu, 09.00 – 17.00</p>
+      </div>
+    </div>
+    <p class="hak-cipta">&copy; <span id="tahun">2026</span> Old Garage. Tugas Web 1.</p>
+  </footer>
+
+  <!-- Tombol WhatsApp mengambang -->
+  <a href="https://wa.me/6200000000000" class="tombol-wa" aria-label="Chat WhatsApp">WA</a>
+
+  <!-- ===== CHATBOT OLD GARAGE ===== -->
+  <!-- Tombol chat mengambang di pojok kanan bawah (di atas tombol WhatsApp) -->
+  <button class="tombol-chat" id="tombolChat" aria-label="Buka chat dengan Old Garage">&#128172;</button>
+
+  <!-- Kotak percakapan chatbot -->
+  <div class="kotak-chat" id="kotakChat">
+    <div class="area-chat" id="areaChat"></div>
+    <div class="pilihan-chat" id="pilihanChat">
+      <button type="button" class="tombol pilihan-chat" data-teks="Layanan apa saja yang tersedia?">Layanan apa saja yang tersedia?</button>
+      <button type="button" class="tombol pilihan-chat" data-teks="Apakah bisa restorasi motor tua?">Apakah bisa restorasi motor tua?</button>
+      <button type="button" class="tombol pilihan-chat" data-teks="Apakah bisa memperbaiki mesin?">Apakah bisa memperbaiki mesin?</button>
+      <button type="button" class="tombol pilihan-chat" data-teks="Apakah bisa modifikasi motor?">Apakah bisa modifikasi motor?</button>
+      <button type="button" class="tombol pilihan-chat" data-teks="Bagaimana cara konsultasi?">Bagaimana cara konsultasi?</button>
+      <button type="button" class="tombol pilihan-chat" data-teks="Bagaimana cara menghubungi bengkel?">Bagaimana cara menghubungi bengkel?</button>
+    </div>
+    <!-- Form kirim pertanyaan ke chatbot -->
+    <form class="form-chat" id="formChat">
+      <input type="text" id="teksChat" placeholder="Ketik pertanyaan Anda..." autocomplete="off">
+      <button type="submit" class="tombol tombol-utama">Kirim</button>
+    </form>
+  </div>
+
+  <!-- Pakai JS yang sama -->
+  <script src="js/script.js"></script>
+</body>
+</html>
